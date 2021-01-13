@@ -13,11 +13,12 @@ npm install -g justijndepover/sonos
 Usage: sonos <command>
 
 Commands:
-  sonos next      Skip to the next song
-  sonos pause     Pause autoplay
-  sonos play      Resume autoplay
-  sonos previous  Play the previous song
-  sonos volume    Set the volume
+  sonos next         Skip to the next song
+  sonos now-playing  Get the current track
+  sonos pause        Pause autoplay
+  sonos play         Resume autoplay
+  sonos previous     Play the previous song
+  sonos volume       Set the volume
 
 Options:
   --help     Show help                                                 [boolean]
