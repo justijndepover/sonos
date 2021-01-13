@@ -1,0 +1,24 @@
+{
+  "name": "sonos",
+  "version": "1.0.0",
+  "description": "Control Sonos device",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sonos",
+    "npm",
+    "command",
+    "node"
+  ],
+  "author": "justijn depover",
+  "license": "MIT",
+  "dependencies": {
+    "sonos": "^1.14.0",
+    "yargs": "^16.2.0"
+  },
+  "bin": {
+    "sonos": "./bin/index.js"
+  }
+}
