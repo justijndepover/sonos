@@ -1,4 +1,19 @@
-const { Sonos } = require('sonos');
-const device = new Sonos('192.168.0.186');
+const sonos = require('sonos');
 
-module.exports = device;
+const getInitialDevice = (timeoutTime = 5000, cb) => {
+    return new Promise((resolve, reject) => {
+        const search = sonos.DeviceDiscovery()
+        search.once('DeviceAvailable', device => {
+            clearTimeout(timeout),
+            search.socket.close();
+            resolve(device);
+        });
+
+        const timeout = setTimeout(() => {
+            search.socket.close();
+            reject(new Error('Unable to find Sonos device'));
+        }, timeoutTime);
+    });
+}
+
+module.exports = getInitialDevice

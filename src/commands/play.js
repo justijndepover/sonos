@@ -1,6 +1,5 @@
 exports.cmd = 'play';
 exports.description = 'Resume autoplay';
-exports.callback = function (yargs) {
-    const device = require('../utils/getSonosDevice');
+exports.callback = function (yargs, device) {
     device.play().then(() => console.log('Resuming...'))
 }

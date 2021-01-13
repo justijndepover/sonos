@@ -1,7 +1,6 @@
 exports.cmd = 'volume';
 exports.description = 'Set the volume';
-exports.callback = function (yargs) {
-    const device = require('../utils/getSonosDevice');
+exports.callback = function (yargs, device) {
     var volume = yargs.argv._[1];
     if (! volume) {
         process.exit();
