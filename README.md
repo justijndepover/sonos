@@ -25,6 +25,9 @@ Options:
   --version  Show version number                                       [boolean]
 ```
 
+## Related repositories
+- [Sonos Library](https://github.com/bencevans/node-sonos) used to communicate with sonos devices
+
 ## Security
 If you find any security related issues, please open an issue or contact me directly at [justijndepover@gmail.com](justijndepover@gmail.com).
 
