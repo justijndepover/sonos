@@ -1,10 +1,10 @@
 module.exports = {
     cmd: 'volume',
     description: 'Set the volume',
-    callback: function (yargs, device) {
+    callback: async function (yargs, device) {
         var volume = yargs.argv._[1];
         if (! volume) {
-            console.log('Volume is required');
+            await device.getVolume().then((volume) => console.log(`current volume is: ${volume}`))
             process.exit();
         }
 
