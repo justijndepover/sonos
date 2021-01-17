@@ -1,5 +1,7 @@
-exports.cmd = 'play';
-exports.description = 'Resume autoplay';
-exports.callback = function (yargs, device) {
-    device.play().then(() => console.log('Resuming...'))
+module.exports = {
+    cmd: 'play',
+    description: 'Resume autoplay',
+    callback: function (yargs, device) {
+        device.play().then(() => console.log('Resuming...'));
+    },
 }
